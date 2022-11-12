@@ -1,6 +1,6 @@
 # Hangman App
 
-This project was created with React and Typescript by Kseniia Guk, 2022.
+This project was created with React and TypeScript by Kseniia Guk, 2022.
 
 ## Gameplay
 
