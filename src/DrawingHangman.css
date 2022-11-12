@@ -1,0 +1,93 @@
+.gallows {
+    margin-top: 3vmax;
+    margin-bottom: 4vmax;
+}
+
+.balk {
+   background-color: rgb(9, 9, 11);
+}
+
+.bottom.balk {
+    width: 5vmax;
+    height: 0.5vmax;
+}
+
+.vertical.balk {
+    margin-left: 2.25vmax;
+    width: 0.5vmax;
+    height: 11vmax;
+    
+}
+
+.right-part {
+    display: flex;
+    flex-direction: row;
+}
+
+.right-bottom-part {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+.top.balk {
+    width: 6vmax;
+    height: 0.5vmax;
+}
+
+.rope.balk {
+    width: 0.5vmax;
+    height: 2vmax;
+    align-self: flex-end;
+}
+
+.head {
+    border-radius: 100%;
+    border: 0.5vmax solid rgb(9, 9, 11);
+    height: 1vmax;
+    width: 1vmax;
+    position: absolute;
+    left: 4.75vmax;
+    top: 2.45vmax;
+}
+
+.body {
+    width: 0.5vmax;
+    height: 4vmax;
+    margin-top: 1.9vmax;
+}
+
+.arm, .leg {
+    position: absolute;
+    width: 2vmax;
+    height: 0.5vmax;
+}
+
+.arm.left {
+    right: 2vmax;
+    top: 3.5vmax;
+    rotate: -150deg;
+    transform-origin: right bottom;
+}
+
+.arm.right {
+    top: 4.9vmax;
+    left: 6vmax;
+    rotate: -30deg;
+    transform-origin: left bottom;
+}
+
+.leg.left {
+    right: 2.2vmax;
+    top: 8.5vmax;
+    rotate: 150deg;
+    transform-origin: right bottom;
+}
+
+.leg.right {
+    top: 7.9vmax;
+    left: 5.7vmax;
+    rotate: 30deg;
+    transform-origin: left bottom;
+}

@@ -1,0 +1,37 @@
+.keys {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, max(6.5vh, 5.3vw));
+    gap: max(1.2vh, 0.9vw);
+    margin: max(2vh, 1.8vw) 10vmax;
+    justify-content: center;
+  }
+
+  .key {
+    width: max(6.4vh, 4.8vw);
+    height: max(5.4vh, 3.8vw);
+    color: rgb(9, 9, 11);
+    font-size: 2.6vmax;
+    background-color: transparent;
+    user-select: none;
+  }
+
+  .key:disabled {
+    opacity: 40%;
+  }
+
+  .key.correct {
+    background-color: rgb(0, 212, 28);
+    /* color: white; */
+  }
+
+  .key.incorrect {
+    background-color: rgb(173, 9, 9);
+    /* color: white; */
+  }
+
+  .key:hover:not(:disabled) {
+    background-color: rgb(0, 187, 255);
+  }
+
+
+

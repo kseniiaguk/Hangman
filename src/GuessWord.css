@@ -1,0 +1,32 @@
+.guess-word.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.guess-word.letter.container {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-size: max(3vw, 2.2vh);
+    margin: 10px;
+    border-bottom: .15em solid rgb(9, 9, 11);
+    text-transform: uppercase;
+    font-weight: bold;
+    width: max(4vw, 2.5vh);
+}
+
+.guess-word.letter .vis {
+    text-align: center;
+}
+
+.guess-word.letter .vis.hidden {
+    visibility: hidden;
+}
+
+.revealed {
+    color: rgb(255, 0, 0);
+}
+
+.win {
+    color: rgb(0, 255, 34);
+}
