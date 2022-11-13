@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# Hangman App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with React and TypeScript by Kseniia Guk, 2022.
 
-## Available Scripts
+## Gameplay
 
-In the project directory, you can run:
+Player should guess the word by choosing letters. They can pick wrong letter only 6 times -- every time "hanged man" gets one of his body parts: head, torso, left arm, right arm, left leg and right leg. If hanged man is drawn entirely with all his 6 parts then game is over. If player reveals all the letters of guessed word they win.
+More details:
 
-### `npm start`
+### The hidden word
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The word is randomly generated from  one of the two prepared lists of the most common words. One list conists of 100 Russian words, the second one contains 100 English words.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Languages
 
-### `npm test`
+At the top of the screen there is a switch that allows you to select the application language - Russian or English. When switching the language, a new word is generated in the selected language, the game starts again.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### The letters of the hidden word
 
-### `npm run build`
+The letters of the hidden word are displayed right under the picture of the hangman. Each letter is originally hidden and is shown if player guesses that letter. If the player wins all the letters turn light-green, in the case of failure unguessed letters reveal and turn red.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### The keyboard
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+At the bottom of the screen is the keyboard with all the letters of the selected alphabet. Each "key" turns
+  - light-blue by hovering it,
+  - red by clicking it if the hidden word does not includes this letter,
+  - green by clicking it if the hidden word includes this letter.
+Also each key turnes disabled after clicking it, so you can't click any key twice.
+Besides the player can use their device's keyboard for guessing the letters. The app listens if any button is pressed and if it is the case, then the pressed button is checked for the selected alphabet. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Everything else
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The application is adaptive -- it is equally logically displayed on both narrow and wide screens.
+- The project idea was inspired by [https://www.youtube.com/c/WebDevSimplified].

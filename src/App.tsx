@@ -23,7 +23,7 @@ function App() {
     setChosenLetters([]);
     setGuessWord(words[Math.floor(Math.random() * words.length)]);
   },
-    [lang]
+    [lang, words]
   )
 
   function addLetter(letter: string) {
@@ -41,8 +41,8 @@ function App() {
         <select className='select-language' onChange={event => {
           setLang(Number(event.target.value));
         }}>
-          <option className='option-language' selected={lang === 0} value='0'>{lang === 0 ? 'english' : 'английский'}</option>
-          <option className='option-language' selected={lang === 1} value='1'>{lang === 0 ? 'russian' : 'русский'}</option>
+          <option className='option-language' value='0'>{lang === 0 ? 'english' : 'английский'}</option>
+          <option className='option-language' value='1'>{lang === 0 ? 'russian' : 'русский'}</option>
         </select>
       </div>
       <DrawingHangman wrongLettersNum={wrongLetters.length} />

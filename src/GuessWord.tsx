@@ -11,8 +11,8 @@ interface IGuessWord {
 const GuessWord: React.FC<IGuessWord> = ({word, chosenLetters, winStatus, loseStatus}) => {
     return (
         <div className='guess-word container'>
-            {word.split("").map(letter =>
-            <span className='guess-word letter container' >
+            {word.split("").map((letter, index) =>
+            <span key={String(index) + 'hidden-word-letter'} className='guess-word letter container' >
                 <span className={'guess-word letter vis' + 
                 ((! chosenLetters.includes(letter.toUpperCase())) ? (loseStatus ? ' revealed ' : ' hidden ') : (winStatus ? ' win ' : ''))}>{letter}
                 </span>
